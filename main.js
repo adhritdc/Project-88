@@ -34,8 +34,8 @@ function new_image()
 		ball_obj.scaleToWidth(50);
 		ball_obj.scaleToHeight(50);
 		ball_obj.set({
-			top:ball_x,
-			left:ball_y
+			top:ball_y,
+			left:ball_x
 		})
 		canvas.add(ball_obj);
 	})
@@ -88,8 +88,9 @@ function my_keydown(e)
 		// Wrote a code to move ball upward here!
 		ball_y = ball_y - block_image_height;
 		console.log("Block image height = " + block_image_height);
-		console.log("When down key is pressed : X = " + ball_x + "| Y = " + ball_y);
+		console.log("When up key is pressed : X = " + ball_x + "| Y = " + ball_y);
 		canvas.remove(ball_obj);
+		new_image();
 		}
 	}
 
@@ -101,6 +102,7 @@ function my_keydown(e)
 			console.log("Block image height = " + block_image_height);
 			console.log("When down key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 
@@ -111,8 +113,9 @@ function my_keydown(e)
 			// Wrote a code to move ball left side here!
 			ball_x = ball_x - block_image_width;
 			console.log("Block image width = " + block_image_height);
-			console.log("When down key is pressed : X = " + ball_x + "| Y = " + ball_y);
+			console.log("When left key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 
@@ -123,10 +126,11 @@ function my_keydown(e)
 			// Wrote a code to move ball right side here!
 			ball_x = ball_x + block_image_width;
 			console.log("Block image width = " + block_image_width);
-			console.log("When down key is pressed : X = " + ball_x + "| Y = " + ball_y);
+			console.log("When right key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
+			new_image();
+			
 		}
 	}
 	
 }
-
