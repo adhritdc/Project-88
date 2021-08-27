@@ -34,8 +34,8 @@ function new_image()
 		ball_obj.scaleToWidth(50);
 		ball_obj.scaleToHeight(50);
 		ball_obj.set({
-			top:ball_y,
-			left:ball_x
+			top:ball_x,
+			left:ball_y
 		})
 		canvas.add(ball_obj);
 	})
@@ -83,10 +83,10 @@ function my_keydown(e)
 	
 	function up()
 	{
-		if (ball_y > 5)
+		if (ball_x > 5)
 		{
 		// Wrote a code to move ball upward here!
-		ball_y = ball_y - block_image_height;
+		ball_x = ball_x - block_image_height;
 		console.log("Block image height = " + block_image_height);
 		console.log("When up key is pressed : X = " + ball_x + "| Y = " + ball_y);
 		canvas.remove(ball_obj);
@@ -96,9 +96,9 @@ function my_keydown(e)
 
 	function down()
 	{
-		if (ball_y <= 450) {
+		if (ball_x <= 450) {
 		    // Wrote a code to move ball downward here!
-			ball_y = ball_y + block_image_height;
+			ball_x = ball_x + block_image_height;
 			console.log("Block image height = " + block_image_height);
 			console.log("When down key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
@@ -108,10 +108,10 @@ function my_keydown(e)
 
 	function left()
 	{
-		if(ball_x > 5)
+		if(ball_y > 5)
 		{
 			// Wrote a code to move ball left side here!
-			ball_x = ball_x - block_image_width;
+			ball_y = ball_y - block_image_width;
 			console.log("Block image width = " + block_image_height);
 			console.log("When left key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
@@ -121,10 +121,10 @@ function my_keydown(e)
 
 	function right()
 	{
-		if(ball_x <=1050)
+		if(ball_y <=1050)
 		{
 			// Wrote a code to move ball right side here!
-			ball_x = ball_x + block_image_width;
+			ball_y = ball_y + block_image_width;
 			console.log("Block image width = " + block_image_width);
 			console.log("When right key is pressed : X = " + ball_x + "| Y = " + ball_y);
 			canvas.remove(ball_obj);
